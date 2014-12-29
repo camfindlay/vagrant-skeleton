@@ -14,6 +14,9 @@ Vagrant.configure("2") do |config|
   #config.vm.box = "centos-65-x64-virtualbox-puppet"
   #config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/centos-65-x64-virtualbox-puppet.box"
 
+  #Increase the RAM
+  config.vm.customize ["modifyvm", :id, "--memory", 1024]
+
   #---Networking---
 
   # Port forward 80 to 8080
@@ -50,6 +53,8 @@ Vagrant.configure("2") do |config|
   #config.vm.provision :shell, :path => "environment/scripts/optipng.sh"
   #config.vm.provision :shell, :path => "environment/scripts/sass.sh"
   config.vm.provision :shell, :path => "environment/scripts/silverstripe-tasks.sh"
+  config.vm.provision :shell, :path => "environment/scripts/sspak.sh"
+  config.vm.provision :shell, :path => "environment/scripts/java.sh"
   config.vm.provision :shell, :path => "environment/scripts/bootstrap.sh"
   config.vm.provision :shell, :path => "environment/scripts/always.sh", run: "always"
 

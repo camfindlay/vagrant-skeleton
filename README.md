@@ -68,7 +68,8 @@ Edit the `Vagrantfile` to enable or disable install scripts as they are required
 |optipng.sh           |Software |optipng|-|CentOS|Installs optipng for use with compressing PNG images
 |sass.sh              |Software |Ruby, RubyGems, SASS|3.2.10|CentOS|Installs SASS 3.2.10, a handy CSS pre processor
 |bootstrap.sh         |Config   |-|-|-|Various bootstrap tasks and snag fixes
-
+|sspak.sh         |Software   |SSPak|-|https://github.com/silverstripe/sspak|Asset and database snapshot tool for SilverStripe
+|java.sh         |Software   |JRE|1.7.0_71|CentOS| Installs the JRE
 ## Environments
 
 Ideally we'd have scripts and configs that can be used on many environments (including live) however these are just local development environments and none of these are used on a live server.
