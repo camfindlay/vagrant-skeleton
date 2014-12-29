@@ -14,8 +14,9 @@ Vagrant.configure("2") do |config|
   #config.vm.box = "centos-65-x64-virtualbox-puppet"
   #config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/centos-65-x64-virtualbox-puppet.box"
 
-  #Increase the RAM
-  config.vm.customize ["modifyvm", :id, "--memory", 1024]
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 1024
+  end
 
   #---Networking---
 
