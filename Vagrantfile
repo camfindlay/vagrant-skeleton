@@ -4,8 +4,8 @@
 Vagrant.configure("2") do |config|
 
   #CentOS 6.5
-  config.vm.box = "centos-65-x64-virtualbox-nocm"
-  config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/centos-65-x64-virtualbox-nocm.box"
+  config.vm.box = "centos-65-i386-virtualbox-nocm"
+  config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/centos-65-i386-virtualbox-nocm.box"
 
   config.vm.provider "virtualbox" do |v|
     v.memory = 1024
