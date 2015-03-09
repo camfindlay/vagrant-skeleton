@@ -6,9 +6,12 @@
 echo "Installing Mcrypt php extension"
 
 #install EPEL repo
-/vagrant/scripts/epel.sh
+if [ ! -f /etc/yum.repos.d/epel.repo ]; then
+    sudo yum install epel-release -y
+fi
 
-yum install -y php-mcrypt --enablerepo=epel
+sudo yum install libmcrypt-devel -y
+sudo yum install -y php-mcrypt --enablerepo=epel
 
 echo "Restarting Apache"
 systemctl restart httpd.service
